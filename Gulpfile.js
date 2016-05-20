@@ -48,9 +48,21 @@ gulp.task('start', ['serve'], function () {
 // Run our karma tests
 gulp.task('karma', function (done) {
   new KarmaServer({
-    configFile: __dirname + '/karma.conf.js'
+    configFile: __dirname + '/karma.conf.js',
+    autoWatch: true,
+    singleRun: false
   }, done).start();
 });
+
+
+// gulp.task('test-dev', function(cb) {
+// 	runKarma('karma.conf.js', {
+// 		autoWatch: true,
+// 		singleRun: false
+// 	}, cb);
+// });
+
+
 
 // Use ES5 by default
 gulp.task('default', ['start']);
@@ -65,7 +77,7 @@ gulp.task('clean', function() {
   .pipe(clean({read: false}));
 });
 
-// Transpile our client scripts 
+// Transpile our client scripts
 gulp.task('babel', ['clean'], function() {
   return gulp.src('client/**/*')
     .pipe(babel({
