@@ -6,12 +6,23 @@ angular.module('shortly.services', [])
   Links.getAll = function () {
     return $http({
       method: 'GET',
-      url: '/api/users/signup',
+      url: '/api/links',
     })
     .then(function (links) {
-      return links;
+      return links.data;
     });
   };
+
+  // Links.postAll = function (link) {
+  //   return $http({
+  //     method: 'POST',
+  //     url: '/api/links',
+  //     data: link
+  //   })
+  //   .then(function (link) {
+  //     return link;
+  //   });
+  // };
 
   return Links;
   // Your code here
