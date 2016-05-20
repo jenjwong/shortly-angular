@@ -1,6 +1,19 @@
 angular.module('shortly.services', [])
 
 .factory('Links', function ($http) {
+  Links = {};
+
+  Links.getAll = function () {
+    return $http({
+      method: 'GET',
+      url: '/api/users/signup',
+    })
+    .then(function (links) {
+      return links;
+    });
+  };
+
+  return Links;
   // Your code here
 })
 .factory('Auth', function ($http, $location, $window) {
