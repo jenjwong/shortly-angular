@@ -1,14 +1,26 @@
 <div id='container'>
   <h1>All of my shortened links</h1>
+  <nav class="navigation">
+    <ul>
+      <li>
+        <a class="selected" href="#/links">Links</a>
+      </li>
+      <li>
+        <a href="#/shorten">Shorten</a>
+      </li>
+    </ul>
+  </nav>
 
-  <!-- <div ng-repeat="data.links in collection track by data.links.name">
-  {{data}}
-</div> -->
 
 
-
-<ul>
-  <li ng-repeat="links in data.links">{{ links.visits }}</li>
-</ul>
+<div class="links">
+    <div class="link" ng-repeat="links in data.links">
+      <span><img src=/assets/redirect_icon.png></span>
+      <span class="title">{{ links.title }}<span>
+      <span class="original">{{ links.url }}<span>
+      <span class="info">{{ links.code }}<span>
+        <span class="visits count">{{ links.visits }}<span>
+    </div>
+</div>
 
 </div>
