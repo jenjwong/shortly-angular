@@ -1,9 +1,24 @@
 <div id='container' ng-controller='ShortenController'>
-<h1>this is my shorten pages</h1>
+<h1>Shorten All Your URLS</h1>
+
+<nav class="navigation">
+  <ul>
+    <li>
+      <a class="selected" href="#/links">Links</a>
+    </li>
+    <li>
+      <a href="#/shorten">Shorten</a>
+    </li>
+  </ul>
+</nav>
+
+
+
+
 
 
   <formly-form>
-    <input ng-model="link.url" name="Link" placeholder="Enter your link"/>
+    <input class="form" ng-model="link.url" name="Link" placeholder="Enter your link"/>
       <button type="submit" class="btn btn-default" ng-click="addLink(url)">Submit</button>
   </formly-form>
 

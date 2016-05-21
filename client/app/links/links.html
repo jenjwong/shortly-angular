@@ -15,7 +15,7 @@
 
   <label>Search all the things with magical Angularness: <input ng-model="searchText"></label>
   <div class="links">
-      <div class="link" ng-repeat="links in data.links | filter:searchText">
+      <div class="link" ng-repeat="links in data.links | orderBy:'-visits'| filter:searchText">
         <span><img src=/assets/redirect_icon.png></span>
         <span class="title">{{ links.title }}<span>
         <a href="{{ links.baseUrl }}/{{ links.code }}">{{ links.baseUrl }}/{{ links.code }}</a>
