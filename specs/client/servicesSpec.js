@@ -1,6 +1,6 @@
 'use strict';
 
-xdescribe('Services', function () {
+describe('Services', function () {
   beforeEach(module('shortly.services'));
 
   afterEach(inject(function ($httpBackend) {

@@ -13,19 +13,18 @@ angular.module('shortly.services', [])
     });
   };
 
-  // Links.postAll = function (link) {
-  //   return $http({
-  //     method: 'POST',
-  //     url: '/api/links',
-  //     data: link
-  //   })
-  //   .then(function (link) {
-  //     return link;
-  //   });
-  // };
+  Links.addOne = function (link) {
+    return $http({
+      method: 'POST',
+      url: '/api/links',
+      data: link
+    })
+    .then(function (link) {
+      return link;
+    });
+  };
 
   return Links;
-  // Your code here
 })
 .factory('Auth', function ($http, $location, $window) {
   // Don't touch this Auth service!!!
