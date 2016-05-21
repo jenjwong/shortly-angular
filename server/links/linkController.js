@@ -7,12 +7,22 @@ var findLink = Q.nbind(Link.findOne, Link);
 var createLink = Q.nbind(Link.create, Link);
 var findAllLinks = Q.nbind(Link.find, Link);
 
+var getAllRes = [{
+visits: 3,
+link: 'wwww.urMomBakesPies',
+title: 'fun',
+code: 'fdsfds8fsdj',
+baseUrl: 'wwwxxx',
+url: 'fdsfdfdsfdsf url'}]
+
+
+
 module.exports = {
 
   allLinks: function (req, res, next) {
     findAllLinks({})
       .then(function (links) {
-        res.json(links);
+        res.json(getAllRes);
       })
       .fail(function (error) {
         next(error);

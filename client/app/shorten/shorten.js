@@ -9,8 +9,10 @@ angular.module('shortly.shorten', [])
   };
 
   $scope.addLink = function () {
+    console.log('you added a link yaya!!')
     $scope.loading = true;
-    Links.addOne($scope.link)
+    var link = $scope.link;
+    Links.addOne({'url': link})
       .then(function () {
         $scope.loading = false;
         $location.path('/');
@@ -18,5 +20,5 @@ angular.module('shortly.shorten', [])
       .catch(function (error) {
         console.log(error);
       });
-  };
+    };
   });

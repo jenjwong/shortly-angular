@@ -1,3 +1,14 @@
 <div id='container'>
-  <h1> This is my practice text </h1>
+  <h1>All of my shortened links</h1>
+
+  <!-- <div ng-repeat="data.links in collection track by data.links.name">
+  {{data}}
+</div> -->
+
+
+
+<ul>
+  <li ng-repeat="links in data.links">{{ links.visits }}</li>
+</ul>
+
 </div>
