@@ -2,8 +2,10 @@
 <h1>this is my shorten pages</h1>
 
 
-  <formly-form model="person.name">
-    <input ng-model="link.link" name="Link" placeholder="Enter your link"/>
-      <button type="submit" class="btn btn-default" ng-click="addLink(link)">Submit</button>
+  <formly-form>
+    <input ng-model="link.url" name="Link" placeholder="Enter your link"/>
+      <button type="submit" class="btn btn-default" ng-click="addLink(url)">Submit</button>
   </formly-form>
-  <h4>For developer eyes only {{ link.link }}</h4>
+
+
+  <h4>For developer eyes only {{ url.link }}</h4>

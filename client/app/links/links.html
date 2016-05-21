@@ -18,9 +18,10 @@
       <div class="link" ng-repeat="links in data.links | filter:searchText">
         <span><img src=/assets/redirect_icon.png></span>
         <span class="title">{{ links.title }}<span>
+        <a href="{{ links.baseUrl }}/{{ links.code }}">{{ links.baseUrl }}/{{ links.code }}</a>
         <span class="">{{ links.url }}<span>
         <span class="info">{{ links.code }}<span>
-          <span class=" link visits count">{{ links.visits }}<span>Visits
+        <span class=" link visits count">{{ links.visits }}<span>Visits
       </div>
   </div>
 </div>

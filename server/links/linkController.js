@@ -35,7 +35,7 @@ module.exports = {
   allLinks: function (req, res, next) {
     findAllLinks({})
       .then(function (links) {
-        res.json(getAllRes);
+        res.json(links);
       })
       .fail(function (error) {
         next(error);
@@ -43,10 +43,11 @@ module.exports = {
   },
 
   newLink: function (req, res, next) {
+    console.log(req.body, 'server ulr link !!!!!!!!!!!!!!!!!!!!!!!!!!!')
     var url = req.body.url;
-    if (!util.isValidUrl(url)) {
-      return next(new Error('Not a valid url'));
-    }
+    // if (!util.isValidUrl(url)) {
+    //   return next(new Error('Not a valid url'));
+    // }
 
     findLink({url: url})
       .then(function (match) {

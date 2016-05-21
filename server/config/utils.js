@@ -19,8 +19,7 @@ module.exports = {
     });
   },
 
-  isValidUrl: function (url) {
-    return url.match(rValidUrl);
-  }
+  // isValidUrl: function (url) {
+  //   return url.match(rValidUrl);
+  // }
 };
-

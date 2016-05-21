@@ -17,6 +17,7 @@ var createSha = function (url) {
 };
 
 LinkSchema.pre('save', function (next) {
+  console.log('inside the model trying to save to DB!!!!!!!', next)
   var code = createSha(this.url);
   this.code = code;
   next();
