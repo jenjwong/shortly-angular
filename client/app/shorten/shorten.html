@@ -1,9 +1,7 @@
 <div id='container' ng-controller='ShortenController'>
 <h1>this is my shorten pages</h1>
 
- <!-- <formly-form model="ShortenController" fields="vm.userFields">
-      <button type="submit" class="btn btn-default" ng-click="vm.submit(vm.user)">Submit</button>
-  </formly-form> -->
+
   <formly-form model="person.name">
     <input ng-model="link.link" name="Link" placeholder="Enter your link"/>
       <button type="submit" class="btn btn-default" ng-click="addLink(link)">Submit</button>

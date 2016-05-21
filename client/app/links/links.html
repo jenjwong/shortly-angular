@@ -13,14 +13,14 @@
 
 
 
-<div class="links">
-    <div class="link" ng-repeat="links in data.links">
-      <span><img src=/assets/redirect_icon.png></span>
-      <span class="title">{{ links.title }}<span>
-      <span class="original">{{ links.url }}<span>
-      <span class="info">{{ links.code }}<span>
-        <span class="visits count">{{ links.visits }}<span>
-    </div>
-</div>
-
+  <label>Search all the things with magical Angularness: <input ng-model="searchText"></label>
+  <div class="links">
+      <div class="link" ng-repeat="links in data.links | filter:searchText">
+        <span><img src=/assets/redirect_icon.png></span>
+        <span class="title">{{ links.title }}<span>
+        <span class="">{{ links.url }}<span>
+        <span class="info">{{ links.code }}<span>
+          <span class=" link visits count">{{ links.visits }}<span>Visits
+      </div>
+  </div>
 </div>
