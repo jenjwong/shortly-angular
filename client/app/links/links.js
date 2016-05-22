@@ -1,17 +1,15 @@
 angular.module('shortly.links', [])
 
-.controller('LinksController', function ($scope, Links) {
+.controller('LinksController', function ($scope, Links, Auth) {
 
  $scope.data = {
  };
 
 
- $scope.data.links = [
-  // { links: 'Ari'},
-  // { links: 'Q'},
-  // { links: 'Sean'},
-  // { links: 'Anand'}
-];
+ $scope.signout = function() {
+   console.log('calledsignout')
+   Auth.signout();
+ }
 
   $scope.init = function () {
     Links.getAll()
@@ -22,6 +20,7 @@ angular.module('shortly.links', [])
     .catch(function(err) {
       console.log(err);
     });
+
 
   };
 
